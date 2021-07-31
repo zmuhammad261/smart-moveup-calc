@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart MoveUp Program</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" rel="stylesheet">
+    <link href = "css/jquery-ui.css"  rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="calc-container entry-content">
+        <div class="header">
+            <!-- <img src="http://sellbuysmart.newyorknewyorkmarketing.com/wp-content/uploads/SelllBuyLogo.png"/> -->
+            <div class="calc-title">SMART MOVE-UP PROGRAM</div>
+        </div>
+        <div class="content">
+            <div class="price-list">
+                <div class="left-price"></div>
+                <div class="center-price">
+                    <div class="price-value purple total_smart_saving">$23,000</div>
+                    <div class="price-description">Smart Move-Up Savings</div>
+                </div>
+                <div class="right-price"></div>
+            </div>
+            <div class="slider-container">
+                <div class="slider-box full">
+                    <div class="green-slider" id="slider1"></div>
+                    <div class="slider-info">
+                        <div class="slider-start-title">$300,000</div>
+                        <div class="slider-end-title">$3,000,000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="selection-box">
+                <div class="title">SELECT YOUR COMMISSION RATE:</div>
+                <div class="radio-group"> <label class="radio-container"><input type="radio" checked="checked" name="radio" value="0.025" /> <span class="checkmark"></span>
+                        5% Commission</label>
+                    <label class="radio-container"><input type="radio" name="radio" value="0.03" /> <span class="checkmark"></span>
+                        6% Commission</label>
+                </div>
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0"  style="border:0px; color: #333; width: 100%;">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Sellers Agent</th>
+                        <th></th>
+                        <th></th>
+                        <th>&nbsp;</th>
+                        <th>Total Commissions</th>
+                    </tr>
+                    <tr>
+                        <th>With Traditional Agents</th>
+                        <td class="traditionalSA">15,000</td>
+                        <td></td>
+                        <td></td>
+                        <td>=</td>
+                        <td class="sell_smart_saving">$30,000</td>
+                    </tr>
+                    <tr>
+                        <th>With Sell &amp; Buy Smart</th>
+                        <td class="smartProgramSell">$3,000</td>
+                        <td></td>
+                        <td class="smartProgramBuy"></td>
+                        <td>=</td>
+                        <td class="buy_smart_saving">$7,500</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="smart-move-up">Smart Move-Up Savings</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="total_smart_saving">$37,500</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--        
+<table style="border:0px;">
+  <tr>
+    <th ></th>
+    <th>Sellers Agent</th>
+    <th> </th>
+    <th> Buyers Agent</th>
+    <th >Total Fees You'll Pay</th>
+  </tr>
+  <tr>
+    <th>With Traditional Agent</th>
+    <th class="traditionalSA">15,000</th>
+    <th>+</th>
+    <th class="traditionalBA">15,000</th>
+    <th class="sell_smart_saving">$30,000</th>
+  </tr>
+  <tr>
+    <th>With Sell &amp; Buy Smart</th>
+    <td class="smartProgramSell">$3,000	</td>
+    <td>+</td>
+    <td class="smartProgramBuy">$4,500</td>
+    <td class="buy_smart_saving">$7,500</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+        <th></th>
+       <th></th>
+    <td>Smart Move Up Savings</td>
+  </tr>
+  <tr>
+    <th ></th>   
+    <th ></th>
+    <th ></th>
+    <th ></th>
+    <td class="total_smart_saving">$37,500</td>
+  </tr>
+</table>
+-->
+        </div>
+        <div class="header header2">
+            <div class="calc-title" style="color:black; font-size:50px;">*0% Listing Fee Smart Move-Up Savings of <strong class="price-value total_smart_saving" style="padding-right:5px">$</strong>Is Our Investment in You!</div>
+            <br />
+            <div style="color:black; padding:20px">With our Smart Move-Up Program, you&rsquo;ll receive &ldquo;best in class full service&rdquo; of any traditional broker but for absolutely FREE. Just pay the Buyer agent&rsquo;s fee and let us represent you on your next home purchase.</div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js">
+	</script>
+    <script>
+    var initialValue = 300000;
+
+    function getPriceVal(value) {
+        return parseFloat(value.replace(/[^\d\.\-]/g, ""));
+    }
+    var slider = document.getElementById('slider1');
+    var dollarPrefixFormat = wNumb({ prefix: '$ ', decimals: 2 })
+    var slider1 = noUiSlider.create(slider, {
+        start: [300000],
+        step: 5000,
+        range: {
+            min: [300000],
+            max: [3000000]
+        },
+        tooltips: true,
+        format: wNumb({
+            prefix: '<span>Sales Price</span> <br/>$',
+            decimals: 0,
+            thousand: ','
+        }),
+    });
+    slider.noUiSlider.set(initialValue);
+    calcSellSaving(getPriceVal(slider.noUiSlider.get()));
+    var curValue = initialValue;
+    var sell_saving = 0;
+    var buy_saving = 0;
+
+    function formatMoney(n, c, d, t) {
+        var c = isNaN(c = Math.abs(c)) ? 2 : c,
+            d = d == undefined ? "." : d,
+            t = t == undefined ? "," : t,
+            s = n < 0 ? "-" : "",
+            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+            j = (j = i.length) > 3 ? j % 3 : 0;
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t);
+    };
+
+    function calcSellSaving(sales_price) {
+        var selected_value = jQuery("input[name='radio']:checked").val();
+        console.log("value radio", selected_value);
+        // var traditional_seller_agent = sales_price * selected_value;
+        // var sell_smart_program = sales_price * 0.0;
+        // sell_saving = traditional_seller_agent - sell_smart_program;
+        // jQuery('.sell_smart_saving').text('$' + formatMoney(sell_saving));
+        // jQuery('.traditionalSA').text('$' + formatMoney(traditional_seller_agent));
+        // jQuery('.smartProgramSell').text('$' + formatMoney(sell_smart_program));
+        // calcTotal();
+        var traditional_seller_agent = sales_price * selected_value;
+        var traditional_buyer_agent = jQuery('.traditionalBA').text();
+        traditional_buyer_agent = parseInt(traditional_buyer_agent.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ''));
+        console.log('traditional_buyer_agent-------', traditional_buyer_agent)
+        var sell_smart_program = sales_price * 0.01;
+        traditional_buyer_agent = 0;
+        sell_smart_program = 0;
+        sell_saving = traditional_seller_agent + traditional_buyer_agent;
+        //var buy_smart_program = jQuery('.smartProgramBuy').text();
+        //buy_smart_program = parseInt(buy_smart_program.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ''));
+        // buy_saving = sell_smart_program + buy_smart_program;
+        buy_saving = sell_smart_program;
+        jQuery('.buy_smart_saving').text('$' + formatMoney(buy_saving));
+        buy_smart_program = 0;
+        buy_smart_program = 0;
+        jQuery('.sell_smart_saving').text('$' + formatMoney(sell_saving));
+        jQuery('.traditionalSA').text('$' + formatMoney(traditional_seller_agent));
+        jQuery('.smartProgramSell').text('$' + formatMoney(sell_smart_program));
+        calcTotal();
+    }
+
+    function calcBuySaving(purchase_price) {
+        var selected_value = jQuery("input[name='radio']:checked").val();
+        var traditional_buyer_agent = purchase_price * selected_value;
+        var smart_program = purchase_price * 0.01;
+        var sell_smart_program = jQuery('.smartProgramSell').text();
+        sell_smart_program = parseInt(sell_smart_program.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ''));
+        sell_smart_program = 0;
+        smart_program = 0;
+        buy_saving = sell_smart_program + smart_program;
+        var traditional_seller_agent = jQuery('.traditionalSA').text();
+        traditional_seller_agent = parseInt(traditional_seller_agent.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ''));
+        traditional_buyer_agent = 0;
+        sell_saving = traditional_seller_agent + traditional_buyer_agent;
+        jQuery('.sell_smart_saving').text('$' + formatMoney(sell_saving));
+        jQuery('.buy_smart_saving').text('$' + formatMoney(buy_saving));
+        jQuery('.traditionalBA').text('$' + formatMoney(traditional_buyer_agent));
+        //jQuery('.smartProgramBuy').text('$' + formatMoney(smart_program));
+        calcTotal();
+    }
+
+    function calcTotal() {
+        var total = formatMoney(sell_saving - buy_saving);
+        jQuery('.total_smart_saving').text('$' + total);
+    }
+    jQuery("input[name='radio']").change(function() {
+        calcSellSaving(getPriceVal(slider.noUiSlider.get()));
+    });
+    slider1.on('update', function(value) {
+        calcSellSaving(getPriceVal(value[0]));
+    });
+    </script>
+</body>
+
+</html>
